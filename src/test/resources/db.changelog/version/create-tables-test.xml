@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.7"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.7
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.7.xsd">
+    <changeSet id="1" author="test">
+        <createTable tableName="figure">
+            <column autoIncrement="true" name="id" type="INTEGER">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="created_date" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="created_by" type="varchar(50)">
+            </column>
+            <column name="version" type="INTEGER">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_modified_date" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="last_modified_by" type="varchar(250)">
+            </column>
+            <column name="type" type="varchar(250)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="width" type="bigint"/>
+            <column name="radius" type="bigint"/>
+            <column name="height" type="bigint"/>
+        </createTable>
+
+        <createTable tableName="users">
+            <column autoIncrement="true" name="user_id" type="INTEGER">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="username" type="varchar(25)">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="password" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <createTable tableName="roles">
+            <column autoIncrement="true" name="role_id" type="INTEGER">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="name" type="varchar(50)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+        <createTable tableName="users_roles">
+            <column autoIncrement="true" name="id" type="integer">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="user_id" type="integer">
+                <constraints nullable="false"/>
+            </column>
+            <column name="role_id" type="integer">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

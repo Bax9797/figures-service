@@ -1,0 +1,24 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.7"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.7
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.7.xsd">
+
+    <changeSet id="2" author="test">
+        <insert schemaName="public" tableName="users">
+            <column name="user_id" value="1" type="INTEGER"/>
+            <column name="username" value="test1" type="varchar()"/>
+            <column name="password" value="$2a$12$kwqvP.Jes804aiBaP1vxb.DzW6LFFGYmL4TJPyIcfnwaUw3XqYX1O" type="varchar(50)"/>
+        </insert>
+        <insert schemaName="public" tableName="users">
+            <column name="user_id" value="2" type="INTEGER"/>
+            <column name="username" value="test2" type="varchar()"/>
+            <column name="password" value="$2a$12$kwqvP.Jes804aiBaP1vxb.DzW6LFFGYmL4TJPyIcfnwaUw3XqYX1O" type="varchar(50)"/>
+        </insert>
+        <insert schemaName="public" tableName="users">
+            <column name="user_id" value="3" type="INTEGER"/>
+            <column name="username" value="test3" type="varchar()"/>
+            <column name="password" value="$2a$12$kwqvP.Jes804aiBaP1vxb.DzW6LFFGYmL4TJPyIcfnwaUw3XqYX1O" type="varchar(50)"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

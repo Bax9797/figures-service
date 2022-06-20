@@ -1,0 +1,19 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.7"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.7
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.7.xsd">
+
+    <changeSet id="5" author="test">
+            <insert schemaName="public" tableName="figure">
+                <column name="id" value="100" type="INTEGER"/>
+                <column name="created_date"  value="now()" type="time"/>
+                <column name="created_by" value="test1" type="varchar(50)"/>
+                <column name="version" value="0" type="INTEGER"/>
+                <column name="last_modified_date" value="now()" type="timestamp"/>
+                <column name="last_modified_by" value="test" type="varchar(250)"/>
+                <column name="type" value="SQUARE" type="varchar(250)"/>
+                <column name="width" value="10" type="bigint"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

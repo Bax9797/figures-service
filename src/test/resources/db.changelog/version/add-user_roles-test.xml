@@ -1,0 +1,24 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.7"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.7
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.7.xsd">
+
+    <changeSet id="4" author="test">
+        <insert schemaName="public" tableName="users_roles">
+            <column name="id" value="1" type="integer"/>
+            <column name="user_id" value="1" type="integer"/>
+            <column name="role_id" value="1" type="integer"/>
+        </insert>
+        <insert schemaName="public" tableName="users_roles">
+            <column name="id" value="2" type="integer"/>
+            <column name="user_id" value="2" type="integer"/>
+            <column name="role_id" value="2" type="integer"/>
+        </insert>
+        <insert schemaName="public" tableName="users_roles">
+            <column name="id" value="3" type="integer"/>
+            <column name="user_id" value="3" type="integer"/>
+            <column name="role_id" value="3" type="integer"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
